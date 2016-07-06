@@ -14,11 +14,7 @@ $(document).ready(function() {
 	}
 
 	// If post hasn't been upvoted yet, add the upvote checkbox
-	if(postTable.find('.unvoted .arrow.up').length > 0 ){
-		threadUpvoteReady();
-	} else {
-		threadUpvoted();
-	}
+	(postTable.find('.unvoted .arrow.up').length ? threadUpvoteReady : threadUpvoted)();
 
 	// Post Upvote button clicked
 	upvoteButton.on('click', function() {
