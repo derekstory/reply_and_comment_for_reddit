@@ -3,4 +3,5 @@ Chrome extension to automatically default to upvote a Reddit thread if you reply
 
 
 **Available for free in the Chrome Store**
+
 [Reply and Upvote for Reddit](https://chrome.google.com/webstore/detail/reply-and-upvote-for-redd/njgjhlnpcklgfpodinpnoiifjfnmadac)
