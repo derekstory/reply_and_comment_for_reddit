@@ -7,11 +7,14 @@
 
 var _gaq = _gaq || [];
 
-_gaq.push(['_setAccount', 'xxxx']);
+_gaq.push(['_setAccount', 'UA-xxxxx']);
 _gaq.push(['_trackPageview']);
 
 chrome.runtime.onMessage.addListener(function( request, sender, sendResponse ) {
 	if(request.action == "upvotePost"){
-		_gaq.push(['_trackEvent', 'upvotePost', 'upvoted']);
+		_gaq.push(['_trackEvent', 'upvoteThread', 'threadUpvoted']);
+	}
+	if(request.action == "upvoteReply"){
+		_gaq.push(['_trackEvent', 'upvoteReply', 'replyUpvoted']);
 	}
 });

@@ -1,7 +1,7 @@
 {
 	"name": "Reply and Upvote for Reddit",
 	"description": "Default upvote a reddit post or submission if you reply.",
-	"version": "1.0",
+	"version": "2.0",
 	"manifest_version": 2,
 	"content_security_policy": "script-src 'self' https://ssl.google-analytics.com; object-src 'self'",
 	"icons": {  "48": "icon48.png",
