@@ -51,7 +51,7 @@ $(document).ready(function() {
 			var container = target.closest('.child');
 			var buttons   = container.siblings('.midcol.unvoted');
 			var upvote	  = buttons.find('.arrow.up');
-			console.log(buttons);
+
 			upvote.click();
 			chrome.runtime.sendMessage({action: "upvoteReply"});
 		}
