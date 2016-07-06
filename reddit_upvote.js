@@ -35,10 +35,10 @@ $(document).ready(function() {
 	// "Save" button is clicked to submit a reply
 	$(document).on('click', '.save', function(e) {
 		var target   = $(e.currentTarget);
-		var	parent   = target.closest('.child, .md-container');
-		var	textarea = parent.find('textarea');
+		var parent   = target.closest('.child, .md-container');
+		var textarea = parent.find('textarea');
 		var checkbox = parent.find('.upvote-original-reddit-post');
-		var label	 = checkbox.closest('label').find('.reply-upvote-text');
+		var label    = checkbox.closest('label').find('.reply-upvote-text');
 
 		// Upvote the thread
 		if(textarea.val() && checkbox.is(':checked') && !label.hasClass('upvote-reply')) {
@@ -50,7 +50,7 @@ $(document).ready(function() {
 		if(textarea.val() && checkbox.is(':checked') && label.hasClass('upvote-reply')) {
 			var container = target.closest('.child');
 			var buttons   = container.siblings('.midcol.unvoted');
-			var upvote	  = buttons.find('.arrow.up');
+			var upvote    = buttons.find('.arrow.up');
 
 			upvote.click();
 			chrome.runtime.sendMessage({action: "upvoteReply"});
@@ -60,11 +60,11 @@ $(document).ready(function() {
 
 	// Prepare the "upvote reply" checkbox/label
 	$(document).on('click', '.reply-button', function(e) {
-		var target 		= $(e.currentTarget);
-		var parent 		= $('.entry').has(target);
-		var uncle		= parent.next('.child');
-		var labelText 	= uncle.find('.reply-upvote-text');
-		var label 		= $('label').has(labelText);
+		var target    = $(e.currentTarget);
+		var parent    = $('.entry').has(target);
+		var uncle     = parent.next('.child');
+		var labelText = uncle.find('.reply-upvote-text');
+		var label     = $('label').has(labelText);
 
 		if(parent.hasClass('unvoted')) {
 			labelText.addClass('upvote-reply').text('Upvote Reply');
